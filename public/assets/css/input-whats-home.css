@@ -1,0 +1,632 @@
+.cta-mobile{display:none!important}
+
+/* Oxygen ------------------------------------------ */
+#section-3-54857 > .ct-section-inner-wrap{
+   padding-top:0;
+}
+@media (max-width: 767px) {
+   #section-3-54857 > .ct-section-inner-wrap{
+      padding:0;
+   }
+}
+#formsteps .stepsbullets {
+   width:100%;
+}
+
+div#code_block-4-54857 {
+    width: 100%;
+}
+/* Oxygen ------------------------------------------ */
+
+
+#formsteps{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#formsteps section{
+    display: none;
+}
+
+#formsteps section.active{
+    display: block;
+}
+
+#formsteps .stepsbullets{
+    max-width: 317px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px auto 0px auto ;
+    position: relative;
+}
+@media (max-width: 767px) {
+    #formsteps .stepsbullets{
+        max-width: 180px;
+        margin: 0 auto 10px auto;
+    }
+    .btn-mobile{height: 50px !important;}
+    body {overflow: hidden !important;}
+}
+#formsteps .stepsbullets .step{
+    width: 40px;
+    height: 40px;
+    background: #00b97558;;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    z-index: 20;
+}
+
+@media (max-width: 767px) {
+    #formsteps .stepsbullets .step{
+        width: 30px;
+        height: 30px;
+        top: 20px;
+    }
+    .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {border-top-left-radius: 24px;border-bottom-left-radius: 24px;}
+}
+
+#formsteps .stepsbullets .step.active{
+    background: #00c98b; 
+}
+
+
+#formsteps .stepsbullets .bar{
+    position: absolute;
+    width: 0%;
+    height: 10px;
+    background: #00B976;
+    content: " ";
+    border-radius: 100px;
+    top: 15px;
+    left: 10px;
+    z-index: 0;
+}
+
+@media (max-width: 767px) {
+    #formsteps .stepsbullets .bar{
+        position: absolute;
+        width: 0%;
+        height: 10px;
+        background: #00B976;
+        content: " ";
+        border-radius: 100px;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+
+
+#formsteps h2{
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 700;
+    width: 90%;
+    display: block;
+    margin: 0 auto 50px auto;
+    
+}
+
+@media (max-width: 767px) {
+    #formsteps h2{
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media (max-width: 320px) {
+    #formsteps h2{
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 auto 20px auto;
+    }
+}
+
+#formsteps fieldset{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 30px;
+    background: #00B976;
+    border: 0;
+    padding: 30px 0 30px 0;
+}
+
+@media (max-width: 767px) {
+    #formsteps fieldset{
+        padding: 30px 0 30px 0;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    #formsteps fieldset{
+        padding: 20px 0 40px 0;
+        border-radius: 20px;
+    }
+}
+
+#formsteps fieldset dl{
+    max-width: 580px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+} 
+
+#formsteps fieldset dl dt,
+#formsteps fieldset dl dd{
+    margin: 0;
+    padding: 0;
+}
+
+#formsteps fieldset dl input{
+    height: 75px;
+    border-radius: 15px;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+   text-indent:20px;
+}
+
+@media (max-width: 767px) {
+    #formsteps fieldset dl input{
+        height: 50px;
+        border-radius: 10px;
+        border: 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+      text-indent:15px;
+    }  
+}
+
+#formsteps fieldset dl dt{
+    color: #00c88d;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#formsteps ul.tips{
+    display: block;
+    list-style: none;
+    margin:0;
+    padding: 0;
+    width: 90%;
+    margin: 50px auto 50px auto;
+}
+@media (max-width: 767px) {
+    #formsteps ul.tips{
+        margin: 30px auto 30px auto;
+    }
+}
+
+#formsteps ul.tips li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10PX;
+}
+
+#formsteps ul.tips span{
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 200px;
+    background: #00B976;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fff;
+    flex: none;
+    margin-right: 10px;
+}
+#formsteps ul.tips p{
+    padding: 0;
+    margin: 0;
+}
+
+
+#formsteps nav.formsteps{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#formsteps nav.formsteps button{
+    font-size: 30px;
+    font-weight: 700;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 40px;
+    border-radius: 40px;
+    border:0;
+    color: #333;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    #formsteps nav.formsteps button{
+        font-size: 20px;
+        font-weight: 700;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+        border-radius: 40px;
+    }  
+}
+
+#formsteps nav.formsteps button.continue{
+    background: #1D47FF;
+    color: #fff;
+}
+
+#formsteps input.error{
+    border:3px solid #fff;
+    background: rgb(255 212 221);
+}
+
+
+#formsteps .fieldsetsteps .options{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    #formsteps .fieldsetsteps .options{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+#formsteps .fieldsetsteps .options figcaption{
+    font-weight: 700;
+    font-size: 24px;
+   line-height:28px;
+    padding: 0 20px;
+}
+
+/* passo 1 - whatsapp */
+#formsteps section.whatsapp fieldset input{
+    width: 100%;
+    display: block;
+}
+
+#formsteps section.whatsapp fieldset dd{ padding-bottom: 30px; }
+
+
+#formsteps section.whatsapp #valid-msg,
+#formsteps section.whatsapp #error-msg{display:none}
+
+#formsteps section.whatsapp input#whatsappnumber{
+    display: none;
+    width: calc(100% - 115px);
+}
+#formsteps section.whatsapp .iti{
+    width: 100%;
+}
+
+/* passo 2 - Infos */
+#formsteps section.infos dl{
+    max-width: 530px;
+    width: 90%;
+    margin: 0 auto;
+}
+#formsteps section.infos input{
+    width: 100%;
+    margin:0 0 20px 0
+}
+
+
+/* passo 3 - Users and Numbers */
+#formsteps section.users fieldset{
+    margin-bottom: 30px;
+}
+#formsteps section figure{
+    width: 45%;
+    max-width: 1000px;
+    margin: 0;
+    padding: 0 0 50px 0;
+    background: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    #formsteps section figure{
+        width: 100%;
+        margin: 0 auto 30px auto;
+    }
+}
+
+#formsteps section figure img{
+    width: 100%;
+    height: auto;
+    border-bottom: 10px solid #EAEAEA;
+}
+
+#formsteps section .fieldsetsteps .options figcaption{
+    padding: 20px 20px;
+}
+
+#formsteps section.users .qtd{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    
+}
+
+
+#formsteps section.users .qtd .qtdbox{
+    width: 90%;
+    position: relative;
+}
+#formsteps section.users .qtd .qtdbox input{
+    width: 90px;
+    height: 75px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #333;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+#formsteps section.users .qtd p{
+    width: 90% ;
+    margin: 0 auto;
+    padding: 0;
+   font-size:18px;
+   line-height:22px;
+
+}
+
+
+#formsteps section.users .qtd span{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    top: 16px;
+    left: 8%;
+    font-size: 36px;
+    font-weight: 700;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+#formsteps section.users .qtd span.add{
+    left: auto;
+    right: 8%;
+    margin-right: 0px;
+
+}
+@media (max-width: 375px) {
+    #formsteps section.users .qtd span{
+        left: 0%;
+    }
+    #formsteps section.users .qtd span.add{
+        right: 0%; 
+    }
+}
+
+/* passo 4 - Modules */
+#formsteps section.modules figure{
+   margin-bottom:30px
+}
+#formsteps section.modules fieldset{
+    margin-bottom: 50px;
+}
+
+#formsteps section.modules p{
+    padding: 0 20px;
+} 
+
+#formsteps section.modules .activate{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin: 0 auto;
+}
+#formsteps section.modules .activate .switcher{
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    background: #838383;
+    cursor: pointer;
+}
+#formsteps section.modules .activate .switcher button{
+    height: 38px;
+    width: 38px;
+    margin: 1px;
+    border: 0;
+    background: #fff;
+    border-radius: 100px;
+    display: block;
+
+}
+
+#formsteps section.modules .activate .switcher.on{
+    background: #00B976;
+}
+
+#formsteps section.modules .activate .switcher.on button{
+    float: right;   
+}
+
+#formsteps section.modules .embed-responsive{
+    width: 100%;
+    position: relative;
+    padding-bottom: 65%;
+}
+
+#formsteps section.modules .embed-responsive iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 10px solid #EAEAEA;
+}
+
+/* passo sucesso  */
+#formsteps section.success img{
+    margin: 50px auto;
+    display: block;
+    width: 100px;
+}
+@media (max-width: 767px) {
+    #formsteps section.success img{
+        width: 100px;
+    } 
+}
+
+@media (max-width: 767px)
+.footer-section {
+    margin-top: 50px;
+}
+#div_block-97-4362 form{
+   width:100%;
+   max-width:430px;
+   position:fixed;
+   bottom:0;
+   right:0;
+   background:#F0F0F0;
+   box-shadow:0 0 20px #000;
+   border-radius:10px 10px 0 0;
+   z-index:999000000000000000001;
+   
+}
+#div_block-97-4362 form br{
+   display:none;
+}
+#div_block-97-4362 form span.close {
+    width: 47px;
+    height: 47px;
+    display: block;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: -31px;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 47px;
+   cursor:pointer;
+   
+}
+#div_block-97-4362 form h2{
+   display:flex;
+   align-items: center;
+   background:#353A40;
+   font-size:14px;
+   color:#fff;
+   border-radius:10px 10px 0 0;
+   text-align:left;
+   adding-right: 30px;
+}
+#div_block-97-4362 form h2 img{
+width: 53px;
+    height: 53px;
+    border-radius: 50px;
+    border: 3px solid #FFF;
+   margin:11px;
+}
+
+span.wpcf7-form-control-wrap{
+   margin: 0 25px 7px 25px!important;
+    display: block;
+    width: calc(100% - 50px);
+}
+
+#div_block-97-4362 form .wpcf7-text,
+#div_block-97-4362 form .wpcf7-intl_tel,
+#div_block-97-4362 form .wpcf7-select{
+   display:inline-block;
+   height:40px;
+   line-height:40px;
+   border-radius:6px;
+   border:0;
+   width:100%;
+   margin:0;
+   background:#fff;
+}
+#div_block-97-4362 ::placeholder{
+   color:#333;
+}
+
+
+#div_block-97-4362 .wpcf7 label{
+   font-weight: 300;
+    text-transform: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#div_block-97-4362 span.wpcf7-form-control.wpcf7-acceptance span {
+    padding: 0 0 0 5px;
+}
+
+@media (max-width: 320px){
+   
+   #div_block-97-4362 form .wpcf7-text,
+   #div_block-97-4362 form .wpcf7-intl_tel,
+   #div_block-97-4362 form .wpcf7-select{
+      height:30px;
+      line-height:30px;
+   }
+   
+   #div_block-97-4362 .wpcf7-submit{
+      font-size:16px;
+   }
+}
+
+
+.cta-mobile{
+   display:none;
+}
+@media (max-width: 667px){
+   .cta-mobile{
+      display:block;
+      background:#fff;
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      texta-align:center;
+      padding:10px 0;
+   }
+   .cta-mobile a{
+      text-decoration:none;
+      width:90%;
+      color:#fff;
+      border-radius:6px;
+      padding:10px 16px;
+      background:#2846fa;
+      display:inline-block;
+   }
+}
