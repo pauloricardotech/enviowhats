@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\User;
-
+use Illuminate\Validation\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Http;
@@ -12,12 +12,12 @@ use Storage;
 use Auth;
 class TemplateController extends Controller
 {
-    
+
     use Whatsapp;
 
     //return template requeest form page
     public function index()
-    {  
+    {
         $templates=Template::where('user_id',Auth::id())->latest()->paginate(20);
         $active_templates=Template::where('user_id',Auth::id())->where('status',1)->count();
         $inactive_templates=Template::where('user_id',Auth::id())->where('status',0)->count();
@@ -40,13 +40,15 @@ class TemplateController extends Controller
         return view('user.template.create');
     }
 
+
     public function store(Request $request,$type)
     {
         if (getUserPlanData('template_limit') == false) {
                 return response()->json([
                     'message'=>__('Limite Máximo de Modelo Excedido')
-                ],401);  
+                ],401);
         }
+
 
         $validated = $request->validate([
             'template_name' => 'required|max:100',
@@ -55,7 +57,7 @@ class TemplateController extends Controller
         if ($type == 'text-with-media') {
             $validated = $request->validate([
                 'file' => 'required|mimes:jpg,jpeg,png,webp,gif,pdf,docx,xlsx,csv,txt|max:1000',
-                'message' => 'requerido|max:1000',
+                'message' => 'required|max:1000',
             ]);
 
             $file=$this->saveFile($request,'file');
@@ -69,7 +71,7 @@ class TemplateController extends Controller
                 'org_name' => 'required|max:100',
                 'contact_number' => ['required', new Phone,'max:20'],
                 'wa_number' => ['required', new Phone,'max:20'],
-                
+
             ]);
         }
         elseif ($type == 'text-with-button') {
@@ -109,7 +111,7 @@ class TemplateController extends Controller
                    break;
                 }
                 else{
-                     
+
 
                      foreach ($button as $buttonKey => $buttonValue) {
                         if ($buttonKey == 'type') {
@@ -118,15 +120,15 @@ class TemplateController extends Controller
                               break;
                             }
                         }
-                        
+
                         if (!in_array($buttonKey, $properties)) {
                             $is_valid = false;
                             break;
                         }
 
                         else{
-                           
-                           
+
+
                             if($buttonKey == 'action'){
 
                                 if (!empty($buttonValue)) {
@@ -143,10 +145,10 @@ class TemplateController extends Controller
                                      }
                                 }
 
-                                
+
                             }
                             else{
-                               
+
 
                                 if (empty($buttonValue) || $buttonValue == null) {
 
@@ -167,7 +169,7 @@ class TemplateController extends Controller
 
                     }
                 }
-               
+
             }
 
             if ($is_valid == false) {
@@ -204,7 +206,7 @@ class TemplateController extends Controller
 
 
             foreach ($request->section as $key => $section) {
-            
+
                if (count($section['value'] ?? []) == 0) {
                    $is_valid=false;
                    $error_message=__('Fill up the list option value');
@@ -270,7 +272,7 @@ class TemplateController extends Controller
     public function edit($id)
     {
         $template=Template::where('user_id',Auth::id())->findorFail($id);
-        
+
         if ($template->type == 'text-with-media') {
             $component='user.template.edit.media';
         }
@@ -341,7 +343,7 @@ class TemplateController extends Controller
                     $file=$template->body['attachment']['url'];
                 }
             }
-            
+
             $request['attachment']=$file;
 
         }
@@ -352,7 +354,7 @@ class TemplateController extends Controller
                 'org_name' => 'required|max:100',
                 'contact_number' => ['required', new Phone,'max:20'],
                 'wa_number' => ['required', new Phone,'max:20'],
-                
+
             ]);
         }
         elseif ($type == 'text-with-button') {
@@ -392,7 +394,7 @@ class TemplateController extends Controller
                    break;
                 }
                 else{
-                     
+
 
                      foreach ($button as $buttonKey => $buttonValue) {
                         if ($buttonKey == 'type') {
@@ -401,15 +403,15 @@ class TemplateController extends Controller
                               break;
                             }
                         }
-                        
+
                         if (!in_array($buttonKey, $properties)) {
                             $is_valid = false;
                             break;
                         }
 
                         else{
-                           
-                           
+
+
                             if($buttonKey == 'action'){
 
                                 if (!empty($buttonValue)) {
@@ -426,10 +428,10 @@ class TemplateController extends Controller
                                      }
                                 }
 
-                                
+
                             }
                             else{
-                               
+
 
                                 if (empty($buttonValue) || $buttonValue == null) {
 
@@ -450,7 +452,7 @@ class TemplateController extends Controller
 
                     }
                 }
-               
+
             }
 
             if ($is_valid == false) {
@@ -487,7 +489,7 @@ class TemplateController extends Controller
 
 
             foreach ($request->section as $key => $section) {
-            
+
                if (count($section['value'] ?? []) == 0) {
                    $is_valid=false;
                    $error_message=__('Fill up the list option value');
@@ -539,7 +541,7 @@ class TemplateController extends Controller
 
 
         $template=$this->saveTemplate($request->all(), $request->message,$type,Auth::id(),$id);
-       
+
         return response()->json([
             'message' => __('Modelo atualizado com sucesso'),
         ], 200);
@@ -558,7 +560,7 @@ class TemplateController extends Controller
                $file=$template->body['attachment']['url'];
             }
 
-           
+
 
             if ($file != '') {
                 $fileArr=explode('uploads', $file);
@@ -567,7 +569,7 @@ class TemplateController extends Controller
                    if (Storage::exists($file)) {
                       Storage::delete($file);
                    }
-                   
+
                 }
             }
         }

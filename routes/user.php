@@ -36,6 +36,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'middleware' => ['auth','user
    Route::resource('template',                  USER\TemplateController::class);
    Route::post('/template/store/{type}',        [USER\TemplateController::class,'store'])->name('template.store-now');
 
+   
    //single send or custom text routes
    Route::get('/sent-text-message',                [USER\CustomTextController::class,'index']);
    Route::post('/sent-whatsapp-custom-text/{type}',[USER\CustomTextController::class,'sentCustomText'])->name('sent.customtext');
